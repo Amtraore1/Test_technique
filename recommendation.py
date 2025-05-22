@@ -12,6 +12,7 @@ def generate_recommendations(anomalies, api_key=None):
         "Voici des anomalies techniques détectées sur un serveur :\n\n"
         + "\n".join(f"- {anomaly}" for anomaly in anomalies)
         + "\n\nDonne des recommandations précises et concrètes pour améliorer les performances."
+        + "\n\nExploiter l’historique des données pour identifier les tendances émergentes"
     )
 
     messages = [
