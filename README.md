@@ -56,3 +56,20 @@ Retourne des recommandations ligne par ligne
 
 Gère l’exécution complète du processus  
 Gère la lecture .env et sauvegarde le résultat final dans rapport_final.json  
+
+##  pendant le test en présentiel
+Pendant  le test en présentiel, j'ai voulu ajouter une nouvelle étape pour analyser l’historique des données (CPU, latence, erreurs, température, etc.).
+Cette analyse utilise une régression linéaire pour détecter les tendances à la hausse ou à la baisse, ce qui permet d’anticiper les défaillances et d’optimiser la gestion des ressources.
+
+Les résultats devront etre intégrés dans le prompt envoyé au LLM afin de proposer des recommandations plus précises et préventives.
+
+##  Après le test en présentiel
+
+Suite au test réalisé en présentiel, j’ai modifié le **prompt de génération** afin d'y intégrer une **analyse prédictive des tendances** basées sur l’historique des métriques.
+
+-  **Avantage** : Très simple à implémenter (modification du prompt uniquement, sans changement d'architecture)
+-  **Inconvénient** : Le traitement est **extrêmement long** (plus de 5 heures d'exécution) dû à la taille des données et la génération LLM séquentielle
+
+📄 Le résultat de cette nouvelle version se trouve ici :  
+`data/rapport_apres_test.json`
+)
